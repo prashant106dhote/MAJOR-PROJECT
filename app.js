@@ -103,6 +103,9 @@ app.use("/listings",listings)
   res.locals.country = req.query.country || "";
   next();})
 
+app.get("/", (req, res) => {
+  res.send("Wandermind backend is live! 🚀");
+});
 
 app.get("/textlisting", async (_req, res) => {
   let sampalList = new Listing({
