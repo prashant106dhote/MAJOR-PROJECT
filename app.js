@@ -156,6 +156,9 @@ app.delete("/listings/:id/reviews/:reviewId",wrapAsync(async(req,res)=>{
   res.redirect(`/listings/${id}`)
 }))
 
+app.get("/", (req, res) => {
+  res.send("🚀 Wandermind backend is running successfully!");
+});
 
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
