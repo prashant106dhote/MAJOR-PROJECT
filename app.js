@@ -104,7 +104,7 @@ app.use("/listings",listings)
   next();})
 
 app.get("/", (req, res) => {
-  res.send("Wandermind backend is live! 🚀");
+  res.redirect("/listings");
 });
 
 app.get("/textlisting", async (_req, res) => {
